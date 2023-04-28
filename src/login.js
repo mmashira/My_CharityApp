@@ -49,7 +49,26 @@ export default function Login(props) {
                   width: 200,
                   marginVertical: 10,
                 }}
-                onPress={() => props.navigation.navigate("SignUp")}
+                onPress={() => props.navigation.navigate("Category")}
+                
+              />
+               <Button
+                title="SignUp"
+                loading={false}
+                loadingProps={{ size: 'small', color: 'white' }}
+                buttonStyle={{
+                  backgroundColor: 'rgba(0, 87, 146, 1)',
+                  borderRadius: 15,
+                }}
+                titleStyle={{ fontWeight: 'bold', fontSize: 23 }}
+                containerStyle={{
+                  marginHorizontal: 50,
+                  height: 50,
+                  width: 200,
+                  marginVertical: 10,
+                }}
+                onPress={() => props.navigation.navigate("Login")}
+                
               />
     </View>
   );

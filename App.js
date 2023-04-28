@@ -5,6 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./src/login";
 import HomeScreen from "./src/Screens/HomeScreen";
 import SignUp from "./src/SignUp";
+import Category from "./src/Category";
+import DonationForm from "./src/DonationForm";
 
 
 const stack = createStackNavigator();
