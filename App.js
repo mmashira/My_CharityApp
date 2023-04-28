@@ -17,6 +17,8 @@ function MyCharityApp() {
         <stack.Screen name="Login" component={Login} />
         <stack.Screen name="SignUp" component={SignUp} />
         <stack.Screen name="Home" component={HomeScreen} />
+        <stack.Screen name="Category" component={Category} />
+        <stack.Screen name="DonationForm" component={DonationForm} />
      
       </stack.Navigator>
     </NavigationContainer>
