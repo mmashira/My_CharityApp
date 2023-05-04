@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -11,7 +12,7 @@ import DonationForm from "./src/DonationForm";
 
 const stack = createStackNavigator();
 
-function MyCharityApp() {
+function App() {
   return (
     <NavigationContainer>
       <stack.Navigator>
@@ -27,4 +28,4 @@ function MyCharityApp() {
   );
 }
 
-export default MyCharityApp;
+export default App;
