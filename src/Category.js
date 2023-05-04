@@ -1,5 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React , {Component}from 'react';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { View, Text, TextInput,StyleSheet } from 'react-native';
+import { Button, ButtonGroup, withTheme, Image } from '@rneui/themed';
+
+
+
 const DonationCategories = () => {
     return (
       <View style={styles.container}>
@@ -7,10 +13,12 @@ const DonationCategories = () => {
         <Text style={styles.category}>NGO</Text>
         <Text style={styles.category}>Random</Text>
       </View>
-    );
+    )};
+  
+  
+  handleCategory = () => {
+    props.navigation.navigate('DonationForm')
   };
-  import React, {Component} from 'react';
-
 
 const DATA = [
   {
@@ -43,7 +51,26 @@ class App extends Component {
           renderSectionHeader={({section: {title}}) => (
             <Text style={styles.header}>{title}</Text>
           )}
+          />
+          <Button
+          title="Enter"
+          loading={false}
+          loadingProps={{ size: 'small', color: 'white' }}
+          buttonStyle={{
+            backgroundColor: 'rgba(0, 87, 146, 1)',
+            borderRadius: 15,
+          }}
+          titleStyle={{ fontWeight: 'bold', fontSize: 23 }}
+          containerStyle={{
+            marginHorizontal: 50,
+            height: 50,
+            width: 200,
+            marginVertical: 10,
+          }}
+          onPress={() => props.navigation.navigate("Category")}
+          
         />
+        
       </View>
     );
   }
@@ -52,7 +79,7 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
+    
     marginHorizontal: 16,
   },
   item: {
